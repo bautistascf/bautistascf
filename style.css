@@ -1,0 +1,2156 @@
+/* ===========================================
+   BAUTISTAS CF - WEB OFICIAL
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Outfit',sans-serif;
+    background:#07111f;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+/* Scroll */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#08192c;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#1d4d8f;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#2d6cc0;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:85px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 8%;
+    background:rgba(5,10,20,.75);
+    backdrop-filter:blur(15px);
+    z-index:1000;
+    transition:.4s;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:60px;
+}
+
+.logo span{
+    font-size:1.4rem;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+nav ul{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#d4b15f;
+}
+
+.portal-btn{
+    padding:12px 22px;
+    background:#d4b15f;
+    color:#07111f;
+    border-radius:40px;
+    font-weight:700;
+}
+
+.portal-btn:hover{
+    transform:translateY(-3px);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+    background:url("img/hero-bg.png") center 20%/cover no-repeat;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to bottom,
+        rgba(5,12,22,.70),
+        rgba(7,17,31,.82),
+        rgba(7,17,31,.96)
+    );
+}
+
+.hero-overlay{
+    display:none;
+}
+
+.hero-content{
+    position:relative;
+    z-index:5;
+    width:90%;
+    max-width:900px;
+    animation:fadeUp 1.2s ease;
+}
+
+.hero h1{
+    font-size:6rem;
+    font-weight:800;
+    letter-spacing:3px;
+    margin-bottom:25px;
+    text-shadow:0 10px 40px rgba(0,0,0,.8);
+}
+
+.hero p{
+    font-size:1.35rem;
+    line-height:1.8;
+    max-width:700px;
+    margin:0 auto 45px;
+    color:#e4e4e4;
+    text-shadow:0 5px 20px rgba(0,0,0,.8);
+}
+/* Botones */
+
+.btn-primary,
+.btn-secondary{
+    padding:18px 38px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.35s;
+}
+
+.btn-primary{
+    background:#d4b15f;
+    color:#07111f;
+}
+
+.btn-secondary{
+    border:2px solid white;
+    color:white;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+/* Scroll */
+
+.scroll-indicator{
+    margin-top:70px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    align-items:center;
+    color:#d4d4d4;
+    animation:bounce 2s infinite;
+}
+
+/* ================= SECCIONES ================= */
+
+.section{
+    padding:120px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-title h2{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.section-title p{
+    color:#b7b7b7;
+    font-size:1.1rem;
+}/* ================= CARDS ================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.card,
+.product-card{
+    background:#0d1d31;
+    border-radius:22px;
+    overflow:hidden;
+    transition:.35s;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.card:hover,
+.product-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 45px rgba(0,0,0,.45);
+}
+
+.card img,
+.product-card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:28px;
+}
+
+.card-content h3{
+    margin-bottom:15px;
+    font-size:1.45rem;
+}
+
+.card-content p{
+    color:#c7c7c7;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.card-content a{
+    color:#d4b15f;
+    text-decoration:none;
+    font-weight:700;
+}
+
+.product-card{
+    text-align:center;
+    padding-bottom:30px;
+}
+
+.product-card h3{
+    margin:25px 20px 10px;
+    font-size:1.4rem;
+}
+
+.product-card span{
+    display:block;
+    color:#d4b15f;
+    font-size:1.2rem;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+.product-card a{
+    display:inline-block;
+    padding:14px 30px;
+    border-radius:40px;
+    background:#d4b15f;
+    color:#07111f;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
+
+.product-card a:hover{
+    transform:scale(1.05);
+}
+
+/* ================= DOS COLUMNAS ================= */
+
+.two-columns{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.two-columns img{
+    width:100%;
+    border-radius:25px;
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+.two-columns h2{
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+.two-columns p{
+    color:#c7c7c7;
+    line-height:1.9;
+    margin-bottom:35px;
+}
+
+.center-button{
+    display:flex;
+    justify-content:center;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#050d18;
+    padding:60px 8%;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+footer h3{
+    margin-bottom:15px;
+    font-size:1.8rem;
+}
+
+footer p{
+    color:#a9a9a9;
+    margin-bottom:12px;
+}
+
+footer a{
+    color:#d4b15f;
+    text-decoration:none;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+
+/* ================= ANIMACIONES ================= */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+@keyframes bounce{
+
+    0%,20%,50%,80%,100%{
+        transform:translateY(0);
+    }
+
+    40%{
+        transform:translateY(-10px);
+    }
+
+    60%{
+        transform:translateY(-5px);
+    }
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1100px){
+
+    .navbar{
+        padding:0 5%;
+    }
+
+    nav ul{
+        gap:18px;
+    }
+
+}
+
+@media(max-width:900px){
+
+    .hero h1{
+        font-size:3.3rem;
+    }
+
+    .hero-logo{
+        width:170px;
+    }
+
+    .two-columns{
+        grid-template-columns:1fr;
+    }
+
+    .navbar{
+        flex-direction:column;
+        height:auto;
+        padding:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        margin-top:20px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero h1{
+        font-size:2.6rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .section{
+        padding:90px 6%;
+    }
+
+    .section-title h2{
+        font-size:2.2rem;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+        width:100%;
+        text-align:center;
+    }
+
+}
+/*====================================================
+
+            PÁGINA DE NOTICIAS
+
+====================================================*/
+
+.hero-noticia{
+    position:relative;
+    width:100%;
+    height:70vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+}
+
+.hero-noticia img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-noticia-overlay{
+    position:relative;
+    z-index:2;
+    width:100%;
+    padding:80px 10%;
+    background:linear-gradient(to top,
+    rgba(6,12,22,.96),
+    rgba(6,12,22,.55),
+    transparent);
+}
+
+.categoria{
+    display:inline-block;
+    padding:8px 18px;
+    background:#d4b15f;
+    color:#08111d;
+    font-weight:700;
+    border-radius:30px;
+    margin-bottom:20px;
+    letter-spacing:.5px;
+}
+
+.hero-noticia h1{
+    font-size:3.7rem;
+    line-height:1.15;
+    margin-bottom:20px;
+}
+
+.descripcion{
+    max-width:800px;
+    font-size:1.25rem;
+    color:#d8d8d8;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.info-noticia{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+    color:#bdbdbd;
+    font-size:1rem;
+}
+
+.info-noticia span{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}/*====================================================
+
+        CONTENIDO DE LA NOTICIA
+
+====================================================*/
+
+.contenido-noticia{
+
+    width:90%;
+    max-width:950px;
+    margin:80px auto;
+
+}
+
+.contenido-noticia p{
+
+    font-size:1.15rem;
+    line-height:2;
+    color:#d9d9d9;
+    margin-bottom:30px;
+
+}
+
+.contenido-noticia h2{
+
+    font-size:2rem;
+    margin:60px 0 25px;
+    color:white;
+
+}
+
+.contenido-noticia strong{
+
+    color:#d4b15f;
+
+}
+
+.contenido-noticia img{
+
+    width:100%;
+    border-radius:20px;
+    margin:40px 0;
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+blockquote{
+
+    margin:50px 0;
+    padding:35px;
+    border-left:5px solid #d4b15f;
+    background:#0f1d2f;
+    border-radius:15px;
+    font-size:1.35rem;
+    line-height:1.8;
+    font-style:italic;
+    color:#ffffff;
+
+}
+
+.volver{
+
+    margin-top:70px;
+    text-align:center;
+
+}
+
+.volver .btn-primary{
+
+    display:inline-block;
+    text-decoration:none;
+
+}
+
+/*====================================================
+
+            ANIMACIONES
+
+====================================================*/
+
+.hero-noticia img{
+
+    animation:zoomHero 12s ease-in-out infinite alternate;
+
+}
+
+.hero-noticia-overlay{
+
+    animation:fadeUp 1s ease;
+
+}
+
+.contenido-noticia{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes zoomHero{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+/*====================================================
+
+            RESPONSIVE
+
+====================================================*/
+
+@media(max-width:900px){
+
+    .hero-noticia{
+
+        height:60vh;
+
+    }
+
+    .hero-noticia h1{
+
+        font-size:2.5rem;
+
+    }
+
+    .descripcion{
+
+        font-size:1.05rem;
+
+    }
+
+    .contenido-noticia p{
+
+        font-size:1.05rem;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero-noticia{
+
+        height:55vh;
+
+    }
+
+    .hero-noticia-overlay{
+
+        padding:50px 7%;
+
+    }
+
+    .hero-noticia h1{
+
+        font-size:2rem;
+
+    }
+
+    blockquote{
+
+        padding:25px;
+        font-size:1.1rem;
+
+    }
+
+}
+/*====================================================
+
+            HERO TIENDA
+
+====================================================*/
+
+.hero-tienda{
+
+    position:relative;
+    width:100%;
+    height:75vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:url("../img/tienda-banner.jpg") center center/cover no-repeat;
+
+}
+
+.hero-tienda::before{
+
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        rgba(5,15,30,.75),
+        rgba(5,15,30,.55),
+        rgba(5,15,30,.88)
+    );
+
+}
+
+.hero-tienda-overlay{
+
+    position:relative;
+    z-index:2;
+
+    width:90%;
+    max-width:900px;
+
+    text-align:center;
+
+}
+
+.tag-tienda{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    margin-bottom:25px;
+
+    border-radius:40px;
+
+    background:#d4af37;
+
+    color:#081827;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    font-size:.95rem;
+
+}
+
+.hero-tienda h1{
+
+    font-size:4.2rem;
+
+    color:white;
+
+    margin-bottom:25px;
+
+    line-height:1.15;
+
+}
+
+.hero-tienda p{
+
+    max-width:750px;
+
+    margin:0 auto 40px;
+
+    color:#d9d9d9;
+
+    font-size:1.25rem;
+
+    line-height:1.8;
+
+}
+
+.hero-tienda .btn-primary{
+
+    padding:16px 40px;
+
+    font-size:1.05rem;
+
+    border-radius:50px;
+
+}
+
+/*====================================================
+
+        EFECTOS HERO
+
+====================================================*/
+
+.hero-tienda{
+
+    animation:zoomHero 12s ease-in-out infinite alternate;
+
+}
+
+.hero-tienda h1{
+
+    animation:fadeUp .8s ease;
+
+}
+
+.hero-tienda p{
+
+    animation:fadeUp 1s ease;
+
+}
+
+.hero-tienda .btn-primary{
+
+    animation:fadeUp 1.2s ease;
+
+}/*====================================================
+
+            TARJETAS DE PRODUCTOS
+
+====================================================*/
+
+.product-card{
+
+    position:relative;
+
+    background:#0f1d2f;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 45px rgba(0,0,0,.45);
+
+    border-color:#d4af37;
+
+}
+
+.product-card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+.product-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.product-card h3{
+
+    color:#fff;
+
+    font-size:1.3rem;
+
+    margin:22px 20px 12px;
+
+}
+
+.precio{
+
+    display:block;
+
+    color:#d4af37;
+
+    font-size:1.4rem;
+
+    font-weight:700;
+
+    margin-bottom:22px;
+
+}
+
+.product-card a{
+
+    display:inline-block;
+
+    margin-bottom:28px;
+
+    padding:13px 28px;
+
+    background:#1c6dd0;
+
+    color:white;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.product-card a:hover{
+
+    background:#d4af37;
+
+    color:#081827;
+
+}
+
+/*====================================================
+
+                ETIQUETAS
+
+====================================================*/
+
+.badge{
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+    z-index:10;
+
+    padding:8px 16px;
+
+    border-radius:25px;
+
+    color:white;
+
+    font-size:.8rem;
+
+    font-weight:700;
+
+    letter-spacing:.8px;
+
+}
+
+.nuevo{
+
+    background:#22c55e;
+
+}
+
+.bestseller{
+
+    background:#d4af37;
+
+    color:#081827;
+
+}
+
+.limitado{
+
+    background:#ef4444;
+
+}
+
+.premium{
+
+    background:#8b5cf6;
+
+}
+
+/*====================================================
+
+            GRID PRODUCTOS
+
+====================================================*/
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:35px;
+
+    margin-top:50px;
+
+}/*====================================================
+
+        PRODUCTO DESTACADO
+
+====================================================*/
+
+.producto-destacado{
+
+    width:90%;
+    max-width:1400px;
+
+    margin:100px auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+
+    align-items:center;
+
+    background:#0f1d2f;
+
+    border-radius:30px;
+
+    padding:60px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    overflow:hidden;
+
+}
+
+.destacado-texto span{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:#d4af37;
+
+    color:#081827;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+.destacado-texto h2{
+
+    font-size:3rem;
+
+    color:#fff;
+
+    margin-bottom:25px;
+
+}
+
+.destacado-texto p{
+
+    color:#d7d7d7;
+
+    line-height:1.9;
+
+    font-size:1.1rem;
+
+    margin-bottom:35px;
+
+}
+
+.destacado-imagen{
+
+    text-align:center;
+
+}
+
+.destacado-imagen img{
+
+    width:100%;
+    max-width:500px;
+
+    border-radius:25px;
+
+    transition:.4s;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+.destacado-imagen img:hover{
+
+    transform:scale(1.05) rotate(-2deg);
+
+}
+
+/*====================================================
+    BENEFICIOS
+
+====================================================*/
+
+.beneficios{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:60px auto 0;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+.beneficio{
+
+    background:#0f1d2f;
+
+    border-radius:20px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    border:1px solid rgba(255,255,255,.05);
+
+}
+
+.beneficio:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#d4af37;
+
+}
+
+.beneficio i{
+
+    font-size:2.8rem;
+
+    color:#d4af37;
+
+    margin-bottom:20px;
+
+}
+
+.beneficio h3{
+
+    color:#fff;
+
+    font-size:1.25rem;
+
+}
+
+/*====================================================
+
+            RESPONSIVE
+
+====================================================*/
+
+@media(max-width:900px){
+
+    .hero-tienda h1{
+
+        font-size:2.8rem;
+
+    }
+
+    .producto-destacado{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        padding:40px;
+
+    }
+
+    .destacado-texto h2{
+
+        font-size:2.2rem;
+
+    }
+
+}/*====================================================
+
+            ANIMACIONES
+
+====================================================*/
+
+.product-card,
+.beneficio,
+.producto-destacado{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+.product-card:nth-child(2){
+
+    animation-delay:.1s;
+
+}
+
+.product-card:nth-child(3){
+
+    animation-delay:.2s;
+
+}
+
+.product-card:nth-child(4){
+
+    animation-delay:.3s;
+
+}
+
+.product-card:hover .precio{
+
+    color:#ffd86b;
+
+}
+
+.product-card:hover h3{
+
+    color:#d4af37;
+
+}
+
+.badge{
+
+    box-shadow:0 8px 18px rgba(0,0,0,.25);
+
+}
+
+/*====================================================
+
+            SCROLLBAR
+
+====================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#081827;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#d4af37;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#f1c85d;
+
+}
+
+/*====================================================
+
+            FOOTER TIENDA
+
+====================================================*/
+
+footer{
+
+    margin-top:100px;
+
+    padding:60px 20px;
+
+    text-align:center;
+
+    background:#06111d;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+footer h3{
+
+    color:#fff;
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+
+}
+
+footer p{
+
+    color:#a9b2be;
+
+    margin:8px 0;
+
+}
+
+/*====================================================
+
+            RESPONSIVE EXTRA
+
+====================================================*/
+
+@media (max-width:768px){
+
+    .hero-tienda{
+
+        height:60vh;
+
+    }
+
+    .hero-tienda h1{
+
+        font-size:2.3rem;
+
+    }
+
+    .hero-tienda p{
+
+        font-size:1rem;
+
+        line-height:1.7;
+
+    }
+
+    .cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .product-card img{
+
+        height:240px;
+
+    }
+
+    .beneficios{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .producto-destacado{
+
+        padding:30px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .hero-tienda{
+
+        height:55vh;
+
+    }
+
+    .hero-tienda h1{
+
+        font-size:1.9rem;
+
+    }
+
+    .tag-tienda{
+
+        font-size:.8rem;
+
+        padding:8px 18px;
+
+    }
+
+    .btn-primary{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
+/* =========================================================
+   BAUTISTAS ARENA
+   Diseño adaptado al estilo general de Bautistas CF
+========================================================= */
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.stadium-hero {
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 24, 39, 0.96) 0%,
+            rgba(8, 24, 39, 0.82) 45%,
+            rgba(8, 24, 39, 0.35) 100%
+        ),
+        url("img/estadio.jpg") center / cover no-repeat;
+}
+
+.stadium-hero-content {
+    max-width: 700px;
+    padding: 100px 7%;
+}
+
+.stadium-tag {
+    display: inline-block;
+    margin-bottom: 18px;
+
+    color: #d4af37;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.stadium-hero h1 {
+    margin: 0 0 25px;
+
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    line-height: 0.9;
+    font-weight: 800;
+}
+
+.stadium-hero h1 span {
+    color: #d4af37;
+}
+
+.stadium-hero p {
+    max-width: 520px;
+
+    color: #c3d0da;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   BOTÓN
+========================================================= */
+
+.stadium-button {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: #d4af37;
+    color: #081827;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.stadium-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 25px rgba(212, 175, 55, 0.25);
+}
+
+
+/* =========================================================
+   INTRODUCCIÓN
+========================================================= */
+
+.stadium-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 55px;
+
+    align-items: center;
+
+    padding: 90px 7%;
+
+    background: #081827;
+}
+
+.stadium-intro-image {
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.stadium-intro-image img {
+    display: block;
+
+    width: 100%;
+
+    transition: transform 0.5s ease;
+}
+
+.stadium-intro-image:hover img {
+    transform: scale(1.04);
+}
+
+.stadium-intro-text h2 {
+    margin: 10px 0 25px;
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1;
+
+    font-weight: 800;
+}
+
+.stadium-intro-text h2 span {
+    color: #d4af37;
+}
+
+.stadium-intro-text p {
+    max-width: 550px;
+
+    color: #aebdca;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   ETIQUETAS DE SECCIÓN
+========================================================= */
+
+.section-label {
+    color: #d4af37;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   ESTADÍSTICAS
+========================================================= */
+
+.stadium-stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    background: #102436;
+
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.stadium-stat {
+    padding: 38px 20px;
+
+    text-align: center;
+
+    border-right: 1px solid rgba(255,255,255,0.07);
+
+    transition: 0.3s ease;
+}
+
+.stadium-stat:last-child {
+    border-right: none;
+}
+
+.stadium-stat:hover {
+    background: #162b3d;
+}
+
+.stat-number {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #d4af37;
+
+    font-size: 2.3rem;
+    font-weight: 800;
+}
+
+.stat-label {
+    color: #9eafbd;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   CARACTERÍSTICAS
+========================================================= */
+
+.stadium-features {
+    padding: 90px 7%;
+
+    background: #0b1d2d;
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    margin: 10px 0 0;
+
+    font-size: clamp(2.3rem, 5vw, 4rem);
+
+    line-height: 1;
+
+    font-weight: 800;
+}
+
+.section-heading h2 span {
+    color: #d4af37;
+}
+
+
+/* =========================================================
+   CUADRADOS INTERACTIVOS
+========================================================= */
+
+.features-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.feature-card {
+    position: relative;
+
+    min-height: 260px;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    overflow: hidden;
+
+    background: #102436;
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* Brillo */
+
+.feature-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    top: -90px;
+    right: -90px;
+
+    background: rgba(212,175,55,0.18);
+
+    border-radius: 50%;
+
+    filter: blur(35px);
+
+    opacity: 0;
+
+    transition: 0.4s ease;
+}
+
+
+/* Línea dorada */
+
+.feature-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: #d4af37;
+
+    transition: width 0.4s ease;
+}
+
+
+/* Hover */
+
+.feature-card:hover {
+    transform: translateY(-6px);
+
+    background: #142c40;
+
+    border-color: rgba(212,175,55,0.45);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.3),
+        0 0 20px rgba(212,175,55,0.08);
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.feature-card:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   ICONOS
+========================================================= */
+
+.feature-icon {
+    position: absolute;
+
+    top: 27px;
+    left: 30px;
+
+    font-size: 2rem;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.15);
+
+    filter:
+        drop-shadow(0 0 8px rgba(212,175,55,0.5));
+}
+
+
+/* =========================================================
+   TEXTO DE TARJETAS
+========================================================= */
+
+.feature-card h3 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 0 10px;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.feature-card p {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+
+    color: #9eafbd;
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   EXPERIENCIA
+========================================================= */
+
+.stadium-experience {
+    min-height: 550px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 90px 7%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8,24,39,0.96),
+            rgba(8,24,39,0.55)
+        ),
+        url("img/estadio.jpg") center / cover no-repeat;
+}
+
+.experience-content {
+    max-width: 600px;
+}
+
+.stadium-experience h2 {
+    margin: 10px 0 25px;
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+
+    line-height: 1;
+
+    font-weight: 800;
+}
+
+.stadium-experience h2 span {
+    color: #d4af37;
+}
+
+.stadium-experience p {
+    color: #c3d0da;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   ZONAS DEL ESTADIO
+========================================================= */
+
+.stadium-zones {
+    padding: 90px 7%;
+
+    background: #081827;
+}
+
+.stadium-zones h2 {
+    margin: 10px 0 0;
+
+    font-size: clamp(2.3rem, 5vw, 4rem);
+
+    line-height: 1;
+
+    font-weight: 800;
+}
+
+.stadium-zones h2 span {
+    color: #d4af37;
+}
+
+.zones-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin-top: 50px;
+}
+
+
+/* =========================================================
+   TARJETAS DE ZONAS
+========================================================= */
+
+.zone-card {
+    position: relative;
+
+    min-height: 390px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.zone-card img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 390px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+.zone-card::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(8,24,39,0.95),
+            rgba(8,24,39,0.15)
+        );
+}
+
+.zone-card-content {
+    position: absolute;
+
+    z-index: 2;
+
+    left: 28px;
+    right: 28px;
+    bottom: 25px;
+}
+
+.zone-card-content > span {
+    color: #d4af37;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.zone-card h3 {
+    margin: 7px 0;
+
+    font-size: 1.7rem;
+
+    font-weight: 800;
+}
+
+.zone-card p {
+    max-width: 450px;
+
+    margin: 0;
+
+    color: #c3d0da;
+
+    line-height: 1.5;
+}
+
+.zone-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(212,175,55,0.5);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.35);
+}
+
+.zone-card:hover img {
+    transform: scale(1.06);
+
+    filter: brightness(1.08);
+}
+
+
+/* =========================================================
+   CTA FINAL
+========================================================= */
+
+.stadium-cta {
+    padding: 100px 7%;
+
+    text-align: center;
+
+    background: #102436;
+}
+
+.stadium-cta-content {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.stadium-cta h2 {
+    margin: 10px 0 20px;
+
+    font-size: clamp(2.7rem, 5vw, 4.5rem);
+
+    line-height: 0.95;
+
+    font-weight: 800;
+}
+
+.stadium-cta h2 span {
+    color: #d4af37;
+}
+
+.stadium-cta p {
+    color: #aebdca;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    padding: 30px 7%;
+
+    text-align: center;
+
+    background: #050f18;
+
+    color: #718291;
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .stadium-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stadium-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .zones-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .stadium-hero-content {
+        padding: 80px 6%;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stadium-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stadium-stat {
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(255,255,255,0.07);
+    }
+
+    .stadium-hero h1 {
+        font-size: 3.5rem;
+    }
+
+}/* =========================================================
+   TARJETA SELECCIONADA
+========================================================= */
+
+.feature-card.selected {
+    transform: translateY(-8px);
+
+    background: #162b3d;
+
+    border-color: #d4af37;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35),
+        0 0 35px rgba(212, 175, 55, 0.18);
+}
+
+.feature-card.selected::before {
+    opacity: 1;
+}
+
+.feature-card.selected::after {
+    width: 100%;
+}
+
+.feature-card.selected .feature-icon {
+    transform: scale(1.15);
+
+    filter:
+        drop-shadow(0 0 12px rgba(212, 175, 55, 0.6));
+}

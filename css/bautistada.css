@@ -1,0 +1,991 @@
+/*====================================================
+ /*====================================================
+                HERO BAUTISTADA
+====================================================*/
+
+.hero-bautistada{
+
+    position:relative;
+
+    min-height:75vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(rgba(8,24,39,.55),rgba(8,24,39,.90)),
+    url("../img/productos/caja-banner.jpg");
+
+    background-size:cover;
+
+    background-position:center center;
+
+    background-repeat:no-repeat;
+
+}
+
+.hero-bautistada::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    backdrop-filter:blur(2px);
+
+}
+
+.hero-bautistada-overlay{
+
+    position:relative;
+
+    z-index:2;
+
+    width:min(900px,90%);
+
+}
+
+.hero-bautistada h1{
+
+    font-size:4.8rem;
+
+    font-weight:800;
+
+    margin:25px 0;
+
+    text-shadow:0 10px 30px rgba(0,0,0,.45);
+
+}
+
+.hero-bautistada p{
+
+    max-width:700px;
+
+    margin:0 auto;
+
+    font-size:1.25rem;
+
+    line-height:1.8;
+
+    color:#e3e3e3;
+
+}
+
+.tag-tienda{
+
+    display:inline-block;
+
+    padding:12px 26px;
+
+    border-radius:999px;
+
+    background:#d4af37;
+
+    color:#081827;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+/*====================================================
+                TARJETAS
+====================================================*/
+
+.cajas-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+}
+
+.caja-card{
+
+    background:#102237;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.caja-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#d4af37;
+
+}
+
+.caja-card h3{
+
+    margin-bottom:20px;
+
+    font-size:1.7rem;
+
+}
+
+.caja-card p{
+
+    color:#d1d1d1;
+
+    margin-bottom:20px;
+
+}
+
+.caja-card strong{
+
+    display:block;
+
+    margin-bottom:25px;
+
+    color:#d4af37;
+
+}/*====================================================
+                CONTADOR
+====================================================*/
+
+.contador-bautistada{
+
+    max-width:900px;
+
+    margin:70px auto;
+
+    text-align:center;
+
+}
+
+.barra{
+
+    width:100%;
+
+    height:22px;
+
+    background:#1a2d45;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    margin-bottom:25px;
+
+}
+
+#progreso{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(90deg,#d4af37,#ffe37d);
+
+    transition:.4s;
+
+}
+
+#contador{
+
+    font-size:2rem;
+
+    color:#fff;
+
+}
+
+.completa{
+
+    color:#45d86a !important;
+
+}
+
+/*====================================================
+                CATÁLOGO
+====================================================*/
+
+.catalogo-productos{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:45px;
+
+}
+
+.categoria-prod{
+
+    background:#102237;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.categoria-prod h3{
+
+    color:#d4af37;
+
+    margin-bottom:25px;
+
+    font-size:1.8rem;
+
+}
+
+.productos-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:18px;
+
+}
+
+.producto{
+
+    background:#162b3d;
+
+    border:2px solid transparent;
+
+    color:white;
+
+    padding:16px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-family:'Outfit',sans-serif;
+
+    font-size:1rem;
+
+}
+
+.producto:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#d4af37;
+
+}
+
+.producto.seleccionado{
+
+    background:#d4af37;
+
+    color:#081827;
+
+    font-weight:700;
+
+}
+/*====================================================
+            PASO 3 · DISEÑOS
+====================================================*/
+
+.disenos-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+    margin-top:40px;
+
+}
+
+.diseno-card{
+
+    background:#102237;
+
+    border:2px solid transparent;
+
+    border-radius:25px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.diseno-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#d4af37;
+
+}
+
+.icono-diseno{
+
+    font-size:4rem;
+
+    margin-bottom:20px;
+
+}
+
+.diseno-card h3{
+
+    font-size:1.8rem;
+
+    margin-bottom:15px;
+
+}
+
+.diseno-card p{
+
+    color:#d0d0d0;
+
+    line-height:1.7;
+
+    margin-bottom:30px;
+
+}
+
+.elegir-diseno{
+
+    width:100%;
+
+}
+
+.diseno-card.activo{
+
+    border:2px solid #d4af37;
+
+    box-shadow:0 0 35px rgba(212,175,55,.35);
+
+    transform:translateY(-6px);
+
+}
+.diseno-card.activo{
+
+    border:3px solid #d4af37;
+
+    box-shadow:0 0 30px rgba(212,175,55,.45);
+
+}
+
+.elegir-diseno{
+
+    width:100%;
+
+}
+
+.elegir-diseno:hover{
+
+    cursor:pointer;
+
+}
+/*========================================
+    PRODUCTO SELECCIONADO
+========================================*/
+
+.producto.seleccionado {
+
+    background: #d4af37;
+
+    color: #081827;
+
+    border-color: #d4af37;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(212,175,55,.3);
+
+}
+
+
+/*========================================
+    TAMAÑO SELECCIONADO
+========================================*/
+
+.caja-card .seleccionar-caja.activo {
+
+    background: #d4af37;
+
+    color: #081827;
+
+    box-shadow:
+        0 8px 20px rgba(212,175,55,.3);
+
+}
+
+
+/*========================================
+    DISEÑO SELECCIONADO
+========================================*/
+
+.diseno-card.activo {
+
+    border-color: #d4af37;
+
+    box-shadow:
+        0 0 30px rgba(212,175,55,.35);
+
+    transform: translateY(-6px);
+
+}
+
+.diseno-card.activo .elegir-diseno {
+
+    background: #d4af37;
+
+    color: #081827;
+
+}
+/* =====================================================
+   RESULTADO FINAL · HAZ TU BAUTISTADA
+===================================================== */
+
+.resultado-bautistada {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+
+/* TÍTULO */
+
+.resultado-bautistada .section-title {
+    margin-bottom: 60px;
+}
+
+
+/* CONTENEDOR PRINCIPAL */
+
+.bautistada-preview {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 60px;
+    align-items: center;
+}
+
+
+/* =====================================================
+   ESCENA DE LA CAJA
+===================================================== */
+
+.caja-escena {
+    min-height: 500px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(212, 175, 55, 0.10),
+            transparent 60%
+        );
+
+    border-radius: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   CAJA
+===================================================== */
+
+.caja {
+    width: 330px;
+    height: 250px;
+
+    position: relative;
+
+    transform:
+        perspective(900px)
+        rotateX(8deg)
+        rotateY(-12deg);
+
+    transition: 0.6s ease;
+
+    filter:
+        drop-shadow(
+            0 30px 30px rgba(0,0,0,0.45)
+        );
+}
+
+
+/* =====================================================
+   TAPA
+===================================================== */
+
+.caja-tapa {
+
+    position: absolute;
+
+    top: 0;
+    left: 10px;
+
+    width: 310px;
+    height: 75px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #173b5c,
+            #0b2238
+        );
+
+    border: 3px solid #d4af37;
+
+    border-radius: 12px 12px 5px 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    color: #d4af37;
+
+    z-index: 3;
+
+    transition: 0.5s;
+}
+
+
+/* =====================================================
+   PARTE FRONTAL
+===================================================== */
+
+.caja-frontal {
+
+    position: absolute;
+
+    left: 25px;
+    bottom: 0;
+
+    width: 280px;
+    height: 185px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d2a43,
+            #081827
+        );
+
+    border: 3px solid #d4af37;
+
+    border-radius: 5px 5px 18px 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    transition: 0.5s;
+
+    z-index: 2;
+}
+
+
+/* LOGO / RATATOPÍN */
+
+.caja-logo {
+
+    width: 75px;
+    height: 75px;
+
+    border-radius: 50%;
+
+    background: rgba(212,175,55,0.12);
+
+    border: 2px solid #d4af37;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2.8rem;
+
+    transition: 0.5s;
+}
+
+
+/* NOMBRE */
+
+.caja-frontal strong {
+
+    color: #d4af37;
+
+    font-size: 1.25rem;
+
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   LATERAL
+===================================================== */
+
+.caja-lateral {
+
+    position: absolute;
+
+    right: -25px;
+    bottom: 0;
+
+    width: 25px;
+    height: 185px;
+
+    background: #06131f;
+
+    border-right: 3px solid #d4af37;
+
+    border-top: 3px solid #d4af37;
+
+    border-bottom: 3px solid #d4af37;
+
+    transform:
+        skewY(-35deg);
+
+    transform-origin: left bottom;
+
+    z-index: 1;
+}
+
+
+/* =====================================================
+   PRODUCTOS DENTRO DE LA CAJA
+===================================================== */
+
+.productos-caja {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    width: 330px;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+.producto-caja {
+
+    background: rgba(8,24,39,0.95);
+
+    border: 1px solid #d4af37;
+
+    color: white;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 0.75rem;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.35);
+
+    animation:
+        aparecerProducto 0.4s ease;
+}
+
+
+@keyframes aparecerProducto {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px)
+            scale(0.8);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+}
+
+
+/* =====================================================
+   DISEÑO CLÁSICO
+===================================================== */
+
+.caja.diseno-clasico .caja-tapa {
+
+    background:
+        linear-gradient(
+            135deg,
+            #174d78,
+            #081827
+        );
+}
+
+
+.caja.diseno-clasico .caja-frontal {
+
+    background:
+        linear-gradient(
+            135deg,
+            #123b5d,
+            #081827
+        );
+}
+
+
+/* =====================================================
+   DISEÑO RATATOPÍN
+===================================================== */
+
+.caja.diseno-ratatopin .caja-tapa {
+
+    background:
+        linear-gradient(
+            135deg,
+            #496f86,
+            #243f52
+        );
+
+    border-color: #b7d0df;
+}
+
+
+.caja.diseno-ratatopin .caja-frontal {
+
+    background:
+        linear-gradient(
+            135deg,
+            #395a6e,
+            #172f40
+        );
+
+    border-color: #b7d0df;
+}
+
+
+.caja.diseno-ratatopin .caja-logo {
+
+    background: rgba(183,208,223,0.15);
+
+    border-color: #b7d0df;
+}
+
+
+/* =====================================================
+   DISEÑO PREMIUM
+===================================================== */
+
+.caja.diseno-premium .caja-tapa {
+
+    background:
+        linear-gradient(
+            135deg,
+            #202020,
+            #050505
+        );
+
+    border-color: #d4af37;
+}
+
+
+.caja.diseno-premium .caja-frontal {
+
+    background:
+        linear-gradient(
+            135deg,
+            #151515,
+            #030303
+        );
+
+    border-color: #d4af37;
+}
+
+
+.caja.diseno-premium .caja-logo {
+
+    background:
+        rgba(212,175,55,0.15);
+
+    box-shadow:
+        0 0 20px rgba(212,175,55,0.25);
+}
+
+
+/* =====================================================
+   RESUMEN
+===================================================== */
+
+.resumen-bautistada {
+
+    background: #102237;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 25px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.25);
+}
+
+
+.resumen-bautistada h3 {
+
+    font-size: 1.8rem;
+
+    margin-bottom: 30px;
+
+    color: #d4af37;
+}
+
+
+.resumen-linea {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
+}
+
+
+.resumen-linea span {
+
+    color: #bfc7cf;
+}
+
+
+.resumen-linea strong {
+
+    color: white;
+
+    text-align: right;
+}
+
+
+.resumen-estado {
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    background: #081827;
+
+    color: #cfd6dc;
+
+    text-align: center;
+
+    line-height: 1.5;
+}
+
+
+.finalizar-bautistada {
+
+    width: 100%;
+
+    margin-top: 25px;
+}
+
+
+.finalizar-bautistada:disabled {
+
+    opacity: 0.35;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .bautistada-preview {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .caja {
+
+        transform:
+            perspective(900px)
+            scale(0.8)
+            rotateX(8deg)
+            rotateY(-12deg);
+
+    }
+
+    .caja-escena {
+
+        min-height: 430px;
+
+    }
+
+}
