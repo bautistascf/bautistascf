@@ -2154,3 +2154,815 @@ footer p{
     filter:
         drop-shadow(0 0 12px rgba(212, 175, 55, 0.6));
 }
+
+/* =========================================================
+   SOBRE NOSOTROS
+========================================================= */
+
+
+/* ================= HERO ================= */
+
+.sobre-hero {
+
+    position: relative;
+
+    min-height: 82vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(5, 15, 30, .78),
+            rgba(5, 15, 30, .92)
+        ),
+        url("img/hero-bg.png") center / cover no-repeat;
+
+}
+
+.sobre-hero-overlay {
+
+    width: 90%;
+
+    max-width: 950px;
+
+    position: relative;
+
+    z-index: 2;
+
+    animation: fadeUp .9s ease;
+
+}
+
+.sobre-tag {
+
+    display: inline-block;
+
+    padding: 9px 20px;
+
+    margin-bottom: 25px;
+
+    border-radius: 30px;
+
+    background: #d4af37;
+
+    color: #081827;
+
+    font-size: .85rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+}
+
+.sobre-hero h1 {
+
+    font-size: clamp(3.2rem, 7vw, 6rem);
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    margin-bottom: 30px;
+
+}
+
+.sobre-hero h1 span {
+
+    display: block;
+
+    color: #d4af37;
+
+}
+
+.sobre-hero p {
+
+    max-width: 700px;
+
+    margin: 0 auto 40px;
+
+    color: #d5dce3;
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* ================= CONTENEDORES ================= */
+
+.sobre-seccion {
+
+    padding: 120px 8%;
+
+    background: #07111f;
+
+}
+
+.sobre-contenedor {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+}
+
+.sobre-contenedor.inverso {
+
+    grid-template-columns: 1.1fr .9fr;
+
+}
+
+
+/* ================= IMÁGENES ================= */
+
+.sobre-imagen {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 430px;
+
+    border-radius: 30px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(212,175,55,.15),
+            transparent 65%
+        ),
+        #0d1d31;
+
+    border: 1px solid rgba(212,175,55,.12);
+
+    overflow: hidden;
+
+}
+
+.sobre-imagen img {
+
+    width: 65%;
+
+    max-width: 350px;
+
+    filter:
+        drop-shadow(
+            0 25px 35px rgba(0,0,0,.5)
+        );
+
+    animation: float 5s ease-in-out infinite;
+
+}
+
+
+/* ================= TEXTOS ================= */
+
+.sobre-label {
+
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #d4af37;
+
+    font-size: .8rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+.sobre-texto h2 {
+
+    font-size: clamp(2.5rem, 5vw, 4.3rem);
+
+    line-height: 1;
+
+    margin-bottom: 30px;
+
+    font-weight: 800;
+
+}
+
+.sobre-texto h2 span {
+
+    color: #d4af37;
+
+}
+
+.sobre-texto p {
+
+    color: #b9c5d0;
+
+    font-size: 1.08rem;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ================= FILOSOFÍA ================= */
+
+.sobre-filosofia {
+
+    padding: 120px 8%;
+
+    background: #0b1d2d;
+
+}
+
+.sobre-titulo {
+
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: 0 auto 70px;
+
+}
+
+.sobre-titulo h2 {
+
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+
+}
+
+.sobre-titulo h2 span {
+
+    color: #d4af37;
+
+}
+
+.sobre-titulo p {
+
+    color: #aebdca;
+
+    font-size: 1.1rem;
+
+}
+
+
+/* ================= VALORES ================= */
+
+.valores-grid {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+}
+
+.valor-card {
+
+    padding: 40px 30px;
+
+    background: #102436;
+
+    border: 1px solid rgba(255,255,255,.06);
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    transition: .35s;
+
+}
+
+.valor-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: rgba(212,175,55,.5);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.3);
+
+}
+
+.valor-icono {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(212,175,55,.12);
+
+    color: #d4af37;
+
+    font-size: 1.6rem;
+
+}
+
+.valor-card h3 {
+
+    font-size: 1.4rem;
+
+    margin-bottom: 15px;
+
+}
+
+.valor-card p {
+
+    color: #9eafbd;
+
+    line-height: 1.7;
+
+    font-size: .95rem;
+
+}
+
+
+/* ================= IDENTIDAD ================= */
+
+.sobre-identidad {
+
+    padding: 120px 8%;
+
+    background: #081827;
+
+}
+
+.colores-club {
+
+    margin-top: 35px;
+
+    display: flex;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+.color-club {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+.color-muestra {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 12px;
+
+    display: block;
+
+    border: 1px solid rgba(255,255,255,.1);
+
+}
+
+.color-muestra.azul {
+
+    background: #071827;
+
+}
+
+.color-muestra.dorado {
+
+    background: #d4af37;
+
+}
+
+.color-club strong {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+}
+
+.color-club small {
+
+    color: #8999a8;
+
+}
+
+.identidad-escudo {
+
+    position: relative;
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.identidad-escudo img {
+
+    width: 70%;
+
+    max-width: 400px;
+
+    position: relative;
+
+    z-index: 2;
+
+    filter:
+        drop-shadow(
+            0 25px 35px rgba(0,0,0,.55)
+        );
+
+    animation: float 5s ease-in-out infinite;
+
+}
+
+.escudo-brillo {
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: rgba(212,175,55,.12);
+
+    filter: blur(60px);
+
+}
+
+
+/* ================= RATATOPÍN ================= */
+
+.sobre-personaje {
+
+    max-width: 1250px;
+
+    margin: 120px auto;
+
+    padding: 0 8%;
+
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+}
+
+.personaje-imagen {
+
+    min-height: 500px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(212,175,55,.12),
+            transparent 65%
+        );
+
+    border-radius: 30px;
+
+}
+
+.personaje-imagen img {
+
+    width: 80%;
+
+    max-width: 430px;
+
+    filter:
+        drop-shadow(
+            0 25px 30px rgba(0,0,0,.5)
+        );
+
+    transition: .5s;
+
+}
+
+.personaje-imagen:hover img {
+
+    transform:
+        scale(1.06)
+        rotate(-2deg);
+
+}
+
+.personaje-texto h2 {
+
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+
+    line-height: 1;
+
+    margin-bottom: 30px;
+
+}
+
+.personaje-texto h2 span {
+
+    color: #d4af37;
+
+}
+
+.personaje-texto p {
+
+    color: #b9c5d0;
+
+    font-size: 1.08rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* ================= GORDON ================= */
+
+.sobre-gordon {
+
+    padding: 120px 8%;
+
+    background: #0b1d2d;
+
+}
+
+.gordon-imagen {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: end;
+
+    min-height: 500px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(212,175,55,.12),
+            transparent
+        );
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+}
+
+.gordon-imagen img {
+
+    width: 90%;
+
+    max-width: 500px;
+
+    transition: .5s;
+
+    filter:
+        drop-shadow(
+            0 25px 30px rgba(0,0,0,.45)
+        );
+
+}
+
+.gordon-imagen:hover img {
+
+    transform: scale(1.04);
+
+}
+
+
+/* ================= CTA FINAL ================= */
+
+.sobre-final {
+
+    padding: 130px 8%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(5,15,30,.9),
+            rgba(5,15,30,.96)
+        ),
+        url("img/hero-bg.png") center / cover no-repeat;
+
+}
+
+.sobre-final-contenido {
+
+    max-width: 800px;
+
+    margin: auto;
+
+}
+
+.sobre-final h2 {
+
+    font-size: clamp(2.8rem, 6vw, 5rem);
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+
+}
+
+.sobre-final h2 span {
+
+    color: #d4af37;
+
+}
+
+.sobre-final p {
+
+    color: #b9c5d0;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 40px;
+
+}
+
+.sobre-botones {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+}
+
+.sobre-botones .btn-primary,
+.sobre-botones .btn-secondary {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1000px) {
+
+    .valores-grid {
+
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+    .sobre-contenedor,
+    .sobre-contenedor.inverso {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+    .sobre-personaje {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+    .personaje-imagen {
+
+        min-height: 420px;
+
+    }
+
+}
+
+
+@media(max-width:600px) {
+
+    .sobre-hero {
+
+        min-height: 75vh;
+
+    }
+
+    .sobre-hero h1 {
+
+        font-size: 2.8rem;
+
+    }
+
+    .sobre-hero p {
+
+        font-size: 1rem;
+
+    }
+
+    .sobre-seccion,
+    .sobre-filosofia,
+    .sobre-identidad,
+    .sobre-gordon {
+
+        padding: 90px 6%;
+
+    }
+
+    .valores-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .sobre-imagen {
+
+        min-height: 330px;
+
+    }
+
+    .personaje-imagen {
+
+        min-height: 350px;
+
+    }
+
+    .gordon-imagen {
+
+        min-height: 350px;
+
+    }
+
+    .sobre-botones {
+
+        flex-direction: column;
+
+    }
+
+    .sobre-botones a {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+}
